@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="I'm Hitesh, a 10th-grade student passionate about coding, tech, and creativity. Connect with me on social media or send me a message!">
+    <meta name="keywords" content="Hitesh, student, class 10, coding, tech, personal website, Hitesh Shah, Nepal">
+    <meta name="author" content="Hitesh Shah">
+    <meta property="og:title" content="About Me - Hitesh">
+    <meta property="og:description" content="Check out Hitesh's personal website and social profiles.">
+    <meta property="og:image" content="https://hiteshhighest.github.io/hiteshhighest/Images/logo.jpg">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#000000">
+
+    <title>{% block title %}{% endblock %}</title>
+
+    
+    <link rel="stylesheet" href="{% static 'pages/style.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'pages/Images/favicon.jpg' %}">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Roboto+Slab:wght@100..900&family=Underdog&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Roboto+Slab:wght@100..900&family=Underdog&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loading">
+        Please Wait
+
+        <div id="page">
+            <div id="container">
+                <div id="ring"></div>
+                <div id="ring"></div>
+                <div id="ring"></div>
+                <div id="ring"></div>
+                <div id="h3">H.</div>
+            </div>
+        </div>
+
+        It May Take Few Seconds To Load This Page.
+    </div>
+
+    <nav>
+        <p>H.</p>
+
+        <div class="anchor">
+            <a href="#about">About</a>
+            <a href="#social">Social</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="sidebar" onclick="Menu()">
+            <img src="Images/Menu-open.svg">
+        </div>
+    </nav>
+
+    <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <div class="close-btn" onclick="closeSidebar()">
+            <img src="Images/Menu-close.svg">
+        </div>
+
+        <a href="#about">About</a>
+        <a href="#social">Social</a>
+        <a href="#contact">Contact</a>
+    </div>
+    {% block content %}
+    {% endblock %}
+    <script src="{% static 'pages/script.js' %}"></script>
+</body>
+</html>

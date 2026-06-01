@@ -1,0 +1,181 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block title %}Portfolio - Hitesh{% endblock %}
+
+{% block content %}
+
+
+<section id="about" style="color: #fff;">
+    <div class="about-text">
+        <p style="margin-bottom: 0.5vh;">
+            Hey,<br>
+            I'm <span id="dynamicText"></span><br>
+        </p>
+
+        <p style="font-size: x-large; font-family: 'Roboto Slab', serif;">
+            an AS student!
+        </p>
+
+        <a href="#contact">Contact Me</a>
+    </div>
+
+    <div class="logo">
+        <img src="{% static 'pages/Images/logo.jpg' %}">
+    </div>
+</section>
+
+<section id="social" style="padding: 5vh 5vw;">
+    <h2 style="color: white; font-size: 2.5rem; margin-bottom: 4vh; text-align: center;">
+        Find Me Online
+    </h2>
+
+    <div class="social-grid">
+
+        <!-- Instagram -->
+        <div class="card">
+            <div class="image">
+                <img src="{% static 'pages/Images/Social/Instagram.png' %}" alt="Instagram">
+            </div>
+
+            <div class="content">
+                <a href="https://instagram.com/hiteshhighest" target="_blank">
+                    <span class="title">Instagram</span>
+                </a>
+                <br>
+
+                <a class="action" href="https://instagram.com/hiteshhighest" target="_blank">
+                    Visit profile <span>→</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- GitHub -->
+        <div class="card">
+            <div class="image">
+                <img src="{% static 'pages/Images/Social/Github.png' %}" alt="GitHub">
+            </div>
+
+            <div class="content">
+                <a href="https://github.com/hiteshhighest" target="_blank">
+                    <span class="title">GitHub</span>
+                </a>
+                <br>
+
+                <a class="action" href="https://github.com/hiteshhighest" target="_blank">
+                    Visit profile <span>→</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Facebook -->
+        <div class="card">
+            <div class="image">
+                <img src="{% static 'pages/Images/Social/Facebook.png' %}" alt="Facebook">
+            </div>
+
+            <div class="content">
+                <a href="https://facebook.com/hiteshhighest1" target="_blank">
+                    <span class="title">Facebook</span>
+                </a>
+                <br>
+
+                <a class="action" href="https://facebook.com/hiteshhighest1" target="_blank">
+                    Visit profile <span>→</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- YouTube -->
+        <div class="card">
+            <div class="image">
+                <img src="{% static 'pages/Images/Social/Youtube.png' %}" alt="YouTube">
+            </div>
+
+            <div class="content">
+                <a href="https://youtube.com/@hiteshhighest" target="_blank">
+                    <span class="title">YouTube</span>
+                </a>
+                <br>
+
+                <a class="action" href="https://youtube.com/@hiteshhighest" target="_blank">
+                    Visit profile <span>→</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="projects" style="padding: 5vh 5vw;">
+    <h2 style="color: white; font-size: 2.5rem; margin-bottom: 4vh; text-align: center;">
+        Projects
+    </h2>
+
+    <div class="social-grid">
+        <p style="color: #fff; font-size: x-large;">N/A</p>
+    <!--
+        <div class="card project">
+            <div class="image">
+                <img src="https://raw.githubusercontent.com/hiteshhighest/rpc/refs/heads/main/Images/Rock-Paper-Scissor.png"
+                     alt="Rock Paper Scissor">
+            </div>
+
+            <div class="content">
+                <a href="https://hiteshhighest.github.io/rpc/" target="_blank">
+                    <span class="title">Rock Paper Scissor</span>
+                </a>
+                <br>
+
+                <a class="action" href="https://hiteshhighest.github.io/rpc/" target="_blank">
+                    Visit <span>→</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="card project">
+            <div class="image">
+                <img src="https://raw.githubusercontent.com/hiteshhighest/To-Do/refs/heads/main/todo.png"
+                     alt="To-Do">
+            </div>
+
+            <div class="content">
+                <a href="https://hiteshhighest.github.io/To-Do/" target="_blank">
+                    <span class="title">To-Do</span>
+                </a>
+                <br>
+
+                <a class="action" href="https://hiteshhighest.github.io/To-Do/" target="_blank">
+                    Visit <span>→</span>
+                </a>
+            </div>
+        </div>
+    -->
+
+    </div>
+</section>
+
+<section id="contact">
+    <form class="contact-form" method="post" action="">
+        {% csrf_token %}
+
+        <h2>Let's Get In Touch</h2>
+
+        <input type="text" name="name" placeholder="Your Name" required>
+
+        <input type="email" name="email" placeholder="Your Email">
+
+        <input type="tel" name="number" placeholder="Your Phone Number">
+
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+{% if sent %}
+<div id="successPopup" class="success-popup">
+    ✅ Message sent successfully!
+</div>
+{% endif %}
+
+{% endblock %}
