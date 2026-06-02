@@ -37,6 +37,10 @@ EMAIL_HOST_PASSWORD = 'jeth pjad njlj fiqc'
 
 # Application definition
 
+ALLOWED_HOSTS = [
+    "portfolio-production.up.railway.app"
+]
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
