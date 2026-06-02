@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'pages',
     'crispy_forms',
     "crispy_bootstrap5",
+    "corsheaders",
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
@@ -56,6 +57,7 @@ STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.security.SecurityMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -67,6 +69,10 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'portfolio.urls'
+
+CORS_ALLOWED_ORIGINS = [
+    "https://hiteshhighest.github.io"
+]
 
 TEMPLATES = [
     {
@@ -130,5 +136,3 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
-
-STATIC_URL = 'static/'
