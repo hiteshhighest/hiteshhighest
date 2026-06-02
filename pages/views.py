@@ -35,7 +35,7 @@ def home(request):
             message="I received your message and will reply soon! Thank you for your patience 😊",
             from_email=settings.EMAIL_HOST_USER,
             recipient_list=[email],
-            fail_silently=False,
+            fail_silently=True,
         )
 
         sent = True
