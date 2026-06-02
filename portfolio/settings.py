@@ -35,6 +35,10 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'hiteshhighest122@gmail.com'
 EMAIL_HOST_PASSWORD = 'jeth pjad njlj fiqc'
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://hiteshhighest-production.up.railway.app"
+]
+
 # Application definition
 
 INSTALLED_APPS = [
