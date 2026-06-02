@@ -23,9 +23,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-3ujm&fmg2p$ovbp+110_a3_%xxk$g@!5b=p9perz2@g6iu*_li'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [
+    "hiteshhighest-production.up.railway.app",
+    "localhost",
+    "127.0.0.1",
+    ".railway.app",
+]
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -36,7 +44,8 @@ EMAIL_HOST_USER = 'hiteshhighest122@gmail.com'
 EMAIL_HOST_PASSWORD = 'jeth pjad njlj fiqc'
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://hiteshhighest-production.up.railway.app"
+    "https://hiteshhighest-production.up.railway.app",
+    "https://*.railway.app",
 ]
 
 # Application definition
@@ -73,6 +82,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'portfolio.urls'
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 CORS_ALLOWED_ORIGINS = [
     "https://hiteshhighest.github.io"
