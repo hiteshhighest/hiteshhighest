@@ -41,7 +41,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
 EMAIL_HOST_USER = 'hiteshhighest122@gmail.com'
-EMAIL_HOST_PASSWORD = 'jeth pjad njlj fiqc'
+EMAIL_HOST_PASSWORD = 'zjyc xxjc ykqn lytr'
 
 CSRF_TRUSTED_ORIGINS = [
     "https://hiteshhighest-production.up.railway.app",
