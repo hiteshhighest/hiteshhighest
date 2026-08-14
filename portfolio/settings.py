@@ -41,7 +41,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
 EMAIL_HOST_USER = 'hiteshhighest122@gmail.com'
-EMAIL_HOST_PASSWORD = 'zjyc xxjc ykqn lytr'
+EMAIL_HOST_PASSWORD = WHY DO U NEED THIS TWIN
 
 CSRF_TRUSTED_ORIGINS = [
     "https://hiteshhighest-production.up.railway.app",
